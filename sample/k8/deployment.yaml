@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-demo-app-k8s
+spec:
+  selector:
+    matchLabels:
+      app: sample-demo-app-k8s
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sample-demo-app-k8s
+    spec:
+      containers:
+        - name: sample-demo-app-k8s
+          image: prashantgoel6475/sample:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8083
