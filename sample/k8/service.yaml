@@ -4,7 +4,7 @@ metadata:
   name: sample-demo-app-k8s-svc
 spec:
   selector:
-    app: sample-demo-app-k8s-svc
+    app: sample-demo-app-k8s
   ports:
     - protocol: "TCP"
       port: 8083
